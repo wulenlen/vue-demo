@@ -1,29 +1,34 @@
 <template>
   <div id="app">
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <Anchor /> -->
-
-    <div onclick="onClick()">hhhh</div>
-    <scale />
+    <!-- <scale /> -->
+    <!-- <liquid-fill /> -->
+    <!-- <bar-chart /> -->
+    <!-- <line-chart /> -->
+    <pie-chart />
+    <!-- <vertical-swiper :data="new Array(10)" /> -->
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import Anchor from './components/Anchor.vue'
+import BarChart from './components/echarts/BarChart.vue'
+import LineChart from './components/echarts/LineChart.vue'
+import LiquidFill from './components/echarts/LiquidFill.vue'
+import PieChart from './components/echarts/PieChart.vue'
 import Scale from './components/Scale.vue'
+import VerticalSwiper from './components/swiper/VerticalSwiper.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
-    Anchor,
-    Scale
+    Scale,
+    LiquidFill,
+    VerticalSwiper,
+    BarChart,
+    LineChart,
+    PieChart
   },
   mounted() {
-    window.onClick = function onClick(e) {
-      console.log(e, 333333333)
-    }
+
   }
 }
 </script>
